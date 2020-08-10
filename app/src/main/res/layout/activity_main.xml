@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="50dp"
         android:paddingBottom="50dp"
-        android:background="@color/colorBlack">
+        android:background="@color/colorWhite">
 
         <ProgressBar
             style="@android:style/Widget.ProgressBar.Horizontal"

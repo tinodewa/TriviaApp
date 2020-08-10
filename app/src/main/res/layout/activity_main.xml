@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_srl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:background="@color/colorBlack">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:progressTint="@color/colorDarkBLue"
+            android:progressBackgroundTint="@color/colorLightBlue"
+            android:progress="0" />
+
+        <LinearLayout
+            android:id="@+id/group_question_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/progressBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/question"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="@color/colorDarkBLue"/>
+
+            <TextView
+                android:id="@+id/txt_question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="28sp"
+                android:textColor="@color/colorDarkBLue"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash_tag"
+                android:textSize="28sp"
+                android:textColor="@color/colorDarkBLue" />
+
+            <TextView
+                android:id="@+id/txt_question_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorDarkBLue"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/colorWhite"
+            android:layout_below="@id/group_question_number">
+
+            <TextView
+                android:id="@+id/txt_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Loading..."
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                tools:ignore="HardcodedText" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:id="@+id/group_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_above="@+id/group_btn_navigation">
+
+            <RadioButton
+                android:id="@+id/btn_true"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/txt_true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorGreen"
+                android:buttonTint="@color/colorGreen"
+                android:layoutDirection="rtl" />
+
+            <RadioButton
+                android:id="@+id/btn_false"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/txt_false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorRed"
+                android:buttonTint="@color/colorRed"
+                android:layoutDirection="rtl" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/group_btn_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_alignParentBottom="true"
+            style="?android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/next"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorDarkBLue"
+                android:background="@drawable/btn_outline"
+                style="?android:attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

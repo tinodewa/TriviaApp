@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TriviaTestApp</string>
+    <string name="txt_true">True</string>
+    <string name="txt_false">False</string>
+    <string name="question">Question</string>
+    <string name="slash_tag">/</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="restart">Restart</string>
+</resources>
